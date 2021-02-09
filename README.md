@@ -17,9 +17,9 @@ ___
 ## Installation
 
 - In order to run the project you need to have AMPPS and database managing application installed (MySQL Workbench preferred).
-- If you have them just navigate to the main page of the repository and download or clone the project (.zip file).
+- If you have them just navigate to the main page of the repository and download (.zip file) or clone the project.
 - Import file ("../database/schema/laravel-sprint5.sql") into MySQL Workbench in order to be able to use the existing database schema.
-- Open the terminal in projects root directory and type "composer install" or "php composer.phar install" (it depends if you have it installed globally or not).
+- Open the terminal in projects root directory and type "composer install" or "php composer.phar install" (it depends if You have it installed globally or not).
 - Navigate to **.env** file and set the correct database name and your password.
 - Run the database migrations.
 ```bash
@@ -31,9 +31,9 @@ ___
 
 ## Usage
 
-- Turn on Your AMPPS(needed for MySQL).
+- Turn on Your AMPPS (needed for MySQL).
 - Find and copy the server uri specified in the terminal(after the "php artisan serve" command). Paste it to your browser.
-- In order to login type **login** as a basename <br>
+- In order to login type **login** as a basename: <br>
 <img src="public/img/laravel-login.png">
 </br>
 - Use this email and password to login:
