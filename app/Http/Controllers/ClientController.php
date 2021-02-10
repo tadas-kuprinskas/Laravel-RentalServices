@@ -14,14 +14,8 @@ class ClientController extends Controller
      */
     public function index(Request $request)
     {
-        if (isset($request->brand_id) && $request->brand_id !== 0){
-            $clients = \App\Models\Client::where('brand_id', $request->brand_id)->orderBy('surname')->get();
-        }
-        else{
-            $clients = \App\Models\Client::orderBy('surname')->get();
-        }
        
-
+        $clients = \App\Models\Client::orderBy('surname')->get();
         $brands = \App\Models\Brand::orderBy('title')->get();
         
         return view('clients_index', [
@@ -54,6 +48,7 @@ class ClientController extends Controller
             'surname' => 'required',
             'email' => 'required',
             'phone' => 'required',
+            'brand_id' => 'required'
         ]);
 
         $client = new Client();
@@ -99,6 +94,7 @@ class ClientController extends Controller
             'surname' => 'required',
             'email' => 'required',
             'phone' => 'required',
+            'brand_id' => 'required'
         ]);
 
         $client->fill($request->all());

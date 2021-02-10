@@ -15,10 +15,8 @@ class CarModelController extends Controller
      */
     public function index(Request $request)
     {
-        if (isset($request->brand_id) && $request->brand_id !== 0)
-            $carModel = \App\Models\CarModel::where('brand_id', $request->brand_id)->orderBy('title')->get();
-        else
-            $carModel = \App\Models\CarModel::orderBy('title')->get();
+       
+        $carModel = \App\Models\CarModel::orderBy('title')->get();
         $brands = \App\Models\Brand::orderBy('title')->get();
         return view('car_model_index', ['car_models' => $carModel,
         'brands' => $brands]);

@@ -14,10 +14,8 @@ class BrandController extends Controller
      */
     public function index(Request $request)
     {
-        if (isset($request->brands_id) && $request->brands_id !== 0)
-            $brands = \App\Models\Brand::where('brand_id', $request->brand_id)->orderBy('title')->get();
-        else
-            $brands = \App\Models\Brand::orderBy('year', 'desc')->get();
+     
+        $brands = \App\Models\Brand::orderBy('year', 'desc')->get();
         $car_models = \App\Models\CarModel::orderBy('title')->get();
         $clients = \App\Models\Client::orderBy('surname')->get();
 
